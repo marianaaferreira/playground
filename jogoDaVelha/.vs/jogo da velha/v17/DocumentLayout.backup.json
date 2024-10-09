@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\github\\playground\\jogoDaVelha\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F968B7E-65FA-4B28-B54D-EA568886388E}|jogo da velha.vcxproj|D:\\github\\playground\\jogoDaVelha\\jogo da velha.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F968B7E-65FA-4B28-B54D-EA568886388E}|jogo da velha.vcxproj|solutionrelative:jogo da velha.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "jogo da velha.cpp",
+              "DocumentMoniker": "D:\\github\\playground\\jogoDaVelha\\jogo da velha.cpp",
+              "RelativeDocumentMoniker": "jogo da velha.cpp",
+              "ToolTip": "D:\\github\\playground\\jogoDaVelha\\jogo da velha.cpp",
+              "RelativeToolTip": "jogo da velha.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-09T23:01:51.108Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

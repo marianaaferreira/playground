@@ -10,8 +10,9 @@ void mostraMatriz(int n, char m[][TMAX]) {
         cout << endl;
     }
 }
+
 void escolhePosicao(int n, char posicao, char jogador, char m[][TMAX]) {
-    for (int i = 0; i < n;i++) {
+    for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             if (m[i][j] == posicao)
                 m[i][j] = jogador;
@@ -19,55 +20,53 @@ void escolhePosicao(int n, char posicao, char jogador, char m[][TMAX]) {
     }
 }
 
-//a funcao conta quando o valor nao eh numerico entao mesmo que uma fileira esteja oox ele considera que tem um vencedor
-//arrumar
 char verificaVencedor(int n, char m[][TMAX]) {
-    int cont1=0, cont2 = 0;
-
-    for (int i = 0; i < n; i++) 
-        for (int j = 0; j < n; j++) {
-            if (i == 0 or j == 0) {
-                if (not isdigit(m[i][j]))
-                    for (int k = 0; k < 3; k++) {
-                        if (m[i][k] == m[i][j])
-                            cont1++;
-                        if (m[k][j] == m[i][j])
-                            cont2++;
-                    }
-                if (cont1 == 3 or cont2 == 3) {
-                    return m[i][j];
-                }
-            }
+    // Verifica linhas e colunas
+    for (int i = 0; i < n; i++) {
+        // Verifica linhas
+        if (m[i][0] == m[i][1] && m[i][1] == m[i][2]) {
+            return m[i][0];
         }
-    return 'f';
+        // Verifica colunas
+        if (m[0][i] == m[1][i] && m[1][i] == m[2][i]) {
+            return m[0][i];
+        }
+    }
 
+    // Verifica diagonais
+    if (m[0][0] == m[1][1] && m[1][1] == m[2][2]) {
+        return m[0][0];
+    }
+    if (m[0][2] == m[1][1] && m[1][1] == m[2][0]) {
+        return m[0][2];
+    }
+
+    return 'f'; // Nenhum vencedor
 }
 
 char escolheJogador(char jogador) {
-    if (jogador == 'x')
-        jogador = 'o';
-    else
-        jogador = 'x';
-    return jogador;
+    return jogador == 'x' ? 'o' : 'x';
 }
 
-int main(){
+int main() {
     int n = 3;
     char m[TMAX][TMAX] = { {'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9' } };
     char jogador = 'x', posicao;
     bool finalizar = false;
+
     do {
         mostraMatriz(n, m);
         jogador = escolheJogador(jogador);
-        cout << "Em que posicao vc quer colocar o " << "'" << jogador << "'";
-        cin.get(posicao);
-        cin.ignore();
+        cout << "Em que posicao voce quer colocar o '" << jogador << "'? ";
+        cin >> posicao;
         escolhePosicao(n, posicao, jogador, m);
         char v = verificaVencedor(n, m);
-        if (v == 'o' or v == 'x') {
-            cout << "Vencedor: " << v;
+        if (v == 'o' || v == 'x') {
+            mostraMatriz(n, m);
+            cout << "Vencedor: " << v << endl;
             finalizar = true;
         }
-    } while (not finalizar);
-}
+    } while (!finalizar);
 
+    return 0;
+}
