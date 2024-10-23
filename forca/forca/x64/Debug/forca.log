@@ -1,0 +1,3 @@
+﻿  forca.cpp
+D:\github\playground\forca\forca\forca.cpp(31,15): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+  forca.vcxproj -> D:\github\playground\forca\x64\Debug\forca.exe
