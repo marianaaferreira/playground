@@ -23,11 +23,9 @@ void escolhePosicao(int n, char posicao, char jogador, char m[][TMAX]) {
 char verificaVencedor(int n, char m[][TMAX]) {
     // Verifica linhas e colunas
     for (int i = 0; i < n; i++) {
-        // Verifica linhas
         if (m[i][0] == m[i][1] && m[i][1] == m[i][2]) {
             return m[i][0];
         }
-        // Verifica colunas
         if (m[0][i] == m[1][i] && m[1][i] == m[2][i]) {
             return m[0][i];
         }
