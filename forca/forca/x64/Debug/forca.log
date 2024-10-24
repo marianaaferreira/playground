@@ -1,3 +1,4 @@
 ﻿  forca.cpp
-D:\github\playground\forca\forca\forca.cpp(31,15): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+D:\github\playground\forca\forca\forca.cpp(93,15): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+D:\github\playground\forca\forca\forca.cpp(99,9): warning C4101: 'indice': variável local não referenciada
   forca.vcxproj -> D:\github\playground\forca\x64\Debug\forca.exe
